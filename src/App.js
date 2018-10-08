@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import  {Header}  from './components/Header';
+import  {Header}  from './components/Header/Header';
 import  MovieList  from './components/MovieList';
 import  {MovieSlider}  from './components/MovieSlider';
 import  {MovieSorting}  from './components/MovieSorting';
 
-import JSON from '../src/db.json';
+import JSON from './movieData.json';
 
  class App extends Component {
 

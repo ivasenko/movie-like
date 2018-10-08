@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import MovieList from '../components/MovieList';
-import JSON from '../db.json';
+import movieData from '../movieData.json';
 
 
 export class MovieSlider extends Component {
   state = {
-    movies: JSON
+    movies: movieData
   }
     render() {
       return (

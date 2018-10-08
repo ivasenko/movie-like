@@ -1,0 +1,35 @@
+[
+    {
+        "id": 0,
+      "title": "drugs",
+      "year": 1969,
+      "img": "http://s.wsj.net/public/resources/images/OB-LO016_lovedr_G_20101229053104.jpg",
+      "phrase": "Owmeco jen be tezpoksim vojuz...",
+      "type": "comedy",
+      "country": "france"
+    },
+    {
+        "id": 1,
+        "title": "star wars",
+        "year": 2018,
+        "img": "https://secure.cdn1.wdpromedia.com/resize/mwImage/1/630/354/75/dam/wdpro-assets/parks-and-tickets/tours-and-experiences/star-wars-guided-tour/star-wars-guided-tour-00.jpg?1535132582106",
+      "type": "comedy",
+      "country": "usa"
+    },
+    {
+        "id": 2,
+        "title": "love",
+        "year": 2003,
+        "img": "https://media.boingboing.net/wp-content/uploads/2018/05/Sexy-stormtroopers.jpg",
+      "type": "comedy",
+      "country": "germany"
+    },
+    {
+        "id": 3,
+        "title": "chicken",
+        "year": 2013,
+        "img": "https://cleanfoodcrush.com/wp-content/uploads/2017/02/CleanFoodCrush-Tuna-Nicoise-Salad-Recipe.jpg",
+      "type": "drama",
+      "country": "ukraine"
+    }
+]
