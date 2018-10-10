@@ -5,8 +5,10 @@ import movieData from '../../movieData';
 
 
 function searchFor(term){
+    const termLowCase = term.toLowerCase();
     return function(x){
-        return x.title.toLowerCase().includes(term.toLowerCase()) || !term;
+        const title = x.title.toLowerCase();
+        return title.indexOf(termLowCase)===0 || !termLowCase;
     }
 }
 
