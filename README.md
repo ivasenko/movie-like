@@ -60,7 +60,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [Writing Tests](#writing-tests)
   - [Testing Components](#testing-components)
   - [Using Third Party Assertion Libraries](#using-third-party-assertion-libraries)
-  - [Initializing Test Environment](#initializing-test-environment)
+  - [Initializing Filter Environment](#initializing-test-environment)
   - [Focusing and Excluding Tests](#focusing-and-excluding-tests)
   - [Coverage Reporting](#coverage-reporting)
   - [Continuous Integration](#continuous-integration)
@@ -1483,7 +1483,7 @@ import { expect } from 'chai';
 
 and then use them in your tests like you normally do.
 
-### Initializing Test Environment
+### Initializing Filter Environment
 
 >Note: this feature is available with `react-scripts@0.4.0` and higher.
 

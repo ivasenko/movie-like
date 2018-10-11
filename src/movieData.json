@@ -1,35 +1,82 @@
 [
-    {
-        "id": 0,
-      "title": "drugs",
-      "year": 1969,
-      "img": "http://s.wsj.net/public/resources/images/OB-LO016_lovedr_G_20101229053104.jpg",
-      "phrase": "Owmeco jen be tezpoksim vojuz...",
-      "type": "comedy",
-      "country": "france"
-    },
+  {
+    "id": 0,
+    "title": "Love and other drugs",
+    "year": 2017,
+    "img":   "http://s.wsj.net/public/resources/images/OB-LO016_lovedr_G_20101229053104.jpg",
+    "phrase": "Love and other drugs .....",
+    "type": "comedy",
+    "country": "usa",
+    "category": "film",
+    "name": "film"
+  },
     {
         "id": 1,
         "title": "star wars",
-        "year": 2018,
+        "year": 1970,
         "img": "https://secure.cdn1.wdpromedia.com/resize/mwImage/1/630/354/75/dam/wdpro-assets/parks-and-tickets/tours-and-experiences/star-wars-guided-tour/star-wars-guided-tour-00.jpg?1535132582106",
-      "type": "comedy",
-      "country": "usa"
+      "type": "drama",
+      "country": "canada",
+      "category": "entertainment",
+      "name": "voleyboll"
     },
     {
         "id": 2,
-        "title": "love",
-        "year": 2003,
+        "title": "star wars 3",
+        "year": 1970,
         "img": "https://media.boingboing.net/wp-content/uploads/2018/05/Sexy-stormtroopers.jpg",
-      "type": "comedy",
-      "country": "germany"
+      "type": "drama",
+      "country": "canada",
+      "category": "entertainment",
+      "name": "tennis"
     },
     {
         "id": 3,
-        "title": "chicken",
-        "year": 2013,
-        "img": "https://cleanfoodcrush.com/wp-content/uploads/2017/02/CleanFoodCrush-Tuna-Nicoise-Salad-Recipe.jpg",
-      "type": "drama",
-      "country": "ukraine"
-    }
+        "title": "info-addict",
+        "year": 2017,
+        "img": "https://thumbs.dfs.ivi.ru/storage6/contents/8/c/bfc177b00a0fd3ec56e85be56c9840.jpg",
+      "type": "comedy",
+      "country": "ukraine",
+      "category": "design",
+      "name": "nexus"
+    },
+  {
+    "id": 4,
+    "title": "Amelie's escape",
+    "year": 2017,
+    "img": "http://kinogo.eu/uploads/posts/2018-04/1525108564_pobeg-ameli-2017.jpg",
+    "phrase": "Amelie's escape",
+    "type": "adventure",
+    "country": "germany"
+  },
+  {
+    "id": 5,
+    "title": "between rows",
+    "year": 2018,
+    "img": "http://kinogo.eu/uploads/posts/2018-08/1535123001_mezhdu-ryadami-2018.jpg",
+    "phrase": "Owmeco jen be tezpoksim vojuz...",
+    "type": "drama",
+    "country": "germany"
+  },
+  {
+    "id": 6,
+    "title": "home alone",
+    "year": 1990,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/91pyLjeZrkL._RI_.jpg",
+    "phrase": "home alone",
+    "type": "comedy",
+    "country": "usa"
+  },
+  {
+    "id": 7,
+    "title": "L'un dans l'autre ",
+    "year": 2017,
+    "img": "http://kinogo.eu/uploads/posts/2017-09/1505818013_telo-nalevo-2017.jpg",
+    "phrase": "Любовь-морковь по-французски",
+    "type": "comedy",
+    "country": "france",
+    "category": "film",
+    "name": "film"
+  }
+
 ]
