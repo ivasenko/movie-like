@@ -8,12 +8,18 @@
     "popper.js": "^1.14.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --single-quote --trailing-comma es5 --write \"./src/**/*.js\""
+  },
+  "devDependencies": {
+    "prettier": "^1.14.3"
   }
 }
