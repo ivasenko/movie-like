@@ -6,12 +6,18 @@ import MovieList from './components/MovieList';
 import { MovieSlider } from './components/MovieSlider';
 import { MovieSorting } from './components/MovieSorting';
 
-import JSON from './movieData.json';
-
 class App extends Component {
   state = {
-    movies: JSON,
+    movies: [],
   };
+
+  componentDidMount(){
+      fetch(`https://raw.githubusercontent.com/ivasenko/movie-like/main-template/src/movieData.json`)
+          .then(response => response.json())
+          .then(response => {
+              this.setState({movies: response})
+          })
+  }
 
   render() {
     return (

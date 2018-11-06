@@ -43,7 +43,7 @@ export class Header extends Component {
             {movieSorting
               .filter(searchFor(term))
               .map(
-                movie => (this.state.term ? <Search movie={movie} /> : null)
+                movie => (this.state.term ? <Search key={movie.id} movie={movie} /> : null)
               )}
           </div>
         </div>
