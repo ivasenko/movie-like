@@ -84,16 +84,16 @@ export class MovieSorting extends Component {
             <input type="text" onChange={this.searchHandler} value={term} />
           </form>
           <h3 style={{ fontWeight: 'bold' }}>Type</h3>
-          {movieSorting.type.filter(searchFor(term)).map(movie => (
-            <div>{movie.name}</div>
+          {movieSorting.type.filter(searchFor(term)).map(type => (
+            <div key={type.id}>{type.name}</div>
           ))}
           <h3 style={{ fontWeight: 'bold' }}>Country</h3>
-          {movieSorting.country.filter(searchFor(term)).map(movie => (
-            <div>{movie.name}</div>
+          {movieSorting.country.filter(searchFor(term)).map(country => (
+            <div key={country.id}>{country.name}</div>
           ))}
           <h3 style={{ fontWeight: 'bold' }}>Year</h3>
-          {movieSorting.year.filter(searchFor(term)).map(movie => (
-            <div>{movie.name}</div>
+          {movieSorting.year.filter(searchFor(term)).map(year => (
+            <div key={year.id}>{year.name}</div>
           ))}
         </div>
 
