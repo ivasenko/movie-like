@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Search } from '../Search';
-import movieData from '../../movieData';
 import { SignUp } from '../SignUp';
+import { getMovie } from '../../utils/api';
 
 function searchFor(term) {
   const termLowCase = term.toLowerCase();
@@ -15,10 +15,16 @@ export class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movieSorting: movieData,
+      movieSorting: [],
       term: '',
     };
     this.searchHandler = this.searchHandler.bind(this);
+  }
+
+  componentDidMount() {
+    getMovie().then(response => {
+      this.setState({ movieSorting: response });
+    });
   }
   searchHandler(event) {
     this.setState({ term: event.target.value });
@@ -43,7 +49,10 @@ export class Header extends Component {
             {movieSorting
               .filter(searchFor(term))
               .map(
-                movie => (this.state.term ? <Search key={movie.id} movie={movie} /> : null)
+                movie =>
+                  this.state.term ? (
+                    <Search key={movie.id} movie={movie} />
+                  ) : null
               )}
           </div>
         </div>
