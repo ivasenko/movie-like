@@ -16,9 +16,9 @@
     "node-sass": "^4.10.0"
   },
   "scripts": {
-    "prestart": "npm run build",
-    "start": "node server/app",
-    "dev": "react-scripts start",
+    "prestart1": "npm run build",
+    "start1": "node server/app",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
