@@ -1,3 +1,5 @@
+$main-bg-color: orange;
+
 .App{
   width: 100%;
   text-align: center;
@@ -22,7 +24,7 @@
 .movieSlider div{
     display: flex;
     flex-direction: row;
-    background-color: pink;
+    background-color: $main-bg-color;
 }
 .movie-search{
     border: 1px solid green;
