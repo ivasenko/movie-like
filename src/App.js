@@ -4,7 +4,7 @@ import './App.css';
 import { Header } from './components/Header/Header';
 import MovieList from './components/MovieList';
 import { MovieSlider } from './components/MovieSlider';
-import { MovieSorting } from './components/MovieSorting';
+import { MovieFiltering } from './components/MovieFiltering';
 import { getMovie } from './utils/api';
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
         <Header />
         <MovieSlider />
         <div className="mainScreen">
-          <MovieSorting />
+          <MovieFiltering />
           <MovieList movies={this.state.movies} />
         </div>
       </div>
