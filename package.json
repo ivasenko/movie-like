@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prettier": "prettier --single-quote --trailing-comma es5 --write \"./src/**/*.js\""
+    "prettier": "prettier --single-quote --trailing-comma es5 --write \"./{src,server}/**/*.js\""
   },
   "devDependencies": {
     "node-sass": "^4.10.0",
