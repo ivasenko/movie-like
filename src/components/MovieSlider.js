@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MovieList from '../components/MovieList';
 // import movieData from '../movieData.json';
-import {getMovie} from "../utils/api";
+import { getMovie } from '../utils/api';
 
 export class MovieSlider extends Component {
   state = {
@@ -9,9 +9,9 @@ export class MovieSlider extends Component {
   };
 
   componentDidMount() {
-      getMovie().then(response => {
-          this.setState({ movies: response });
-      });
+    getMovie().then(response => {
+      this.setState({ movies: response });
+    });
   }
 
   render() {

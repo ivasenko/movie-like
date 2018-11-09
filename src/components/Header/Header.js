@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Search } from '../Search';
 import { getMovie } from '../../utils/api';
-import Slider from "react-slick/lib";
-// import {MovieSlider} from "../MovieSlider";
-import MovieList from "../MovieList";
-import MovieListItem from "../MovieListItem";
+import Slider from 'react-slick/lib';
+import FontAwesome from 'react-fontawesome';
+import MovieListItem from '../MovieListItem';
 
 function searchFor(term) {
   const termLowCase = term.toLowerCase();
@@ -14,18 +13,12 @@ function searchFor(term) {
   };
 }
 
-
-
-
-
 export class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
       movieSorting: [],
       term: '',
-
-
     };
     this.searchHandler = this.searchHandler.bind(this);
   }
@@ -47,46 +40,35 @@ export class Header extends Component {
   render() {
     const { movieSorting, term } = this.state;
 
-
-      let settings = {
-          dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1
-      };
+    let settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    };
     return (
       <div className="header">
-        <h1>MovieLike</h1>
-          <Slider {...settings}>
-              <div>
-              <MovieList className="divSlider" movies={this.state.movieSorting} />
-          </div>
-              <div>
-                  <MovieList className="divSlider" movies={this.state.movieSorting} />
-              </div>
-          </Slider>
-          {/*<div>*/}
-          {/*<h3 className="slide">1</h3>*/}
-          {/*</div>*/}
-          {/*<div>*/}
-          {/*<h3 className="slide">2</h3>*/}
-          {/*</div>*/}
-          {/*<div>*/}
-          {/*<h3 className="slide">3</h3>*/}
-          {/*</div>*/}
-          {/*<div>*/}
-          {/*<h3 className="slide">4</h3>*/}
-          {/*</div>*/}
-          {/*<div>*/}
-          {/*<h3 className="slide">5</h3>*/}
-          {/*</div>*/}
-          {/*<div>*/}
-          {/*<h3 className="slide">6</h3>*/}
-          {/*</div>*/}
-          <div className="movieSearching">
+        <div className="logo">
+          <span>MovieLike</span>
+          <FontAwesome name="home" />
+        </div>
+        <Slider {...settings}>
+          {this.state.movieSorting.map((item, i) => (
+            <div className="slide" key={i}>
+              <MovieListItem item={item} />
+            </div>
+          ))}
+        </Slider>
+
+        <div className="movieSearching">
           <form>
-            <input type="text" onChange={this.searchHandler} value={term} />
+            <input
+              placeholder="Search a movie"
+              type="text"
+              onChange={this.searchHandler}
+              value={term}
+            />
           </form>
           <div>
             {movieSorting

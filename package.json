@@ -11,6 +11,7 @@
     "popper.js": "^1.14.4",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-fontawesome": "^1.6.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.1",
