@@ -17,18 +17,24 @@ $main-bg-color: orange;
     display: flex;
     justify-content: space-around;
 }
-.movieSlider {
-   width: 100%;
-    overflow-x:auto;
-}
-.movieSlider div{
-    display: flex;
-    flex-direction: row;
-    background-color: $main-bg-color;
-}
+//.movieSlider {
+//   width: 100%;
+//    overflow-x:auto;
+//}
+//.movieSlider div{
+//    display: flex;
+//    flex-direction: row;
+//    background-color: $main-bg-color;
+//}
 .movie-search{
     border: 1px solid green;
 }
 .movieSearching{
+    margin-top: 60px;
     padding-bottom: 20px;
+}
+.slide{
+  font-size: 24px;
+  background: pink;
+  margin: 0 20px;
 }
