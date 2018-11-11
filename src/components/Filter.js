@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import movieData from '../movieData';
-// import {Search} from "./Search";
 
 const MovieItem = ({ country, title, img, year }) => (
   <div className="country__list-item box flex-spread">
@@ -51,7 +50,7 @@ const ButtonCategories = (movieCategories, setCountry) =>
   movieCategories.map(country => (
     <button
       key={country}
-      className={`btn-${country}`}
+      className="filterItem"
       onClick={() => setCountry(country)}
     >
       {country}
@@ -74,6 +73,8 @@ const UI = ({
   setMovieByYear,
   allMovies,
 }) => (
+
+    // switch
   <div className="box flex-row">
     <div className="box flex-col">
       <h3>Filter by Country</h3>

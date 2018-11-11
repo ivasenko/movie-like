@@ -2,12 +2,19 @@ import React from 'react';
 
 const MovieListItem = ({ item }) => {
   return (
-    <div className="movie-item" style={{ position: 'relative' }}>
-      <div style={{ position: 'absolute', top: 0, left: 0 }}>{item.title}</div>
-      <div style={{ position: 'absolute', top: '25px' }}>{item.year}</div>
-      <div>
-        <img src={item.img} alt={item.img} width="300" height="200" />
-      </div>
+    <div className="movieItem" style={{ position: 'relative' }}>
+        <div className="movieItemLeft">
+            <img src={item.img} alt={item.img} width="300" height="200" />
+        </div>
+        <div className="movieItemRight">
+            <div className="movieItemTitle">{item.title}</div>
+            <div>Slogan: {item.phrase}</div>
+            <div>Type: {item.type}</div>
+            <div>Country: {item.country}</div>
+            <div>Year: {item.year}</div>
+        </div>
+
+
     </div>
   );
 };
