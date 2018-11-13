@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from './App';
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
+import SignIn from './components/signIn/SignIn';
+import SignUp from './components/signUp/SignUp';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
-import './App.scss';
-import { Header } from './components/Header/Header';
-import MovieList from './components/MovieList';
-import { MovieFiltering } from './components/MovieFiltering';
+import styles from './App.scss';
+import { Header } from './components/header/Header';
+import MovieList from './components/movieList/MovieList';
+import { MovieFiltering } from './components/movieFiltering/MovieFiltering';
 import { getMovie } from './utils/api';
-import {MovieSlider}  from './components/MovieSlider';
+import { MovieSlider } from './components/movieSlider/MovieSlider';
 
 class App extends Component {
   state = {
+    activeFilters: [],
     movies: [],
   };
 
@@ -18,15 +19,22 @@ class App extends Component {
     });
   }
 
+  setActiveFilers(activeFilters) {
+    this.setState({ activeFilters: [activeFilters] });
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
-        <MovieSlider/>
-          <div className="mainScreen">
-            <MovieFiltering />
-            <MovieList  className="movieList" movies={this.state.movies} />
-          </div>
+        <MovieSlider />
+        <div className="mainScreen">
+          <MovieFiltering setActiveFilers={this.setActiveFilers.bind(this)} />
+          <MovieList
+            activeFilters={this.state.activeFilters}
+            movies={this.state.movies}
+          />
+        </div>
       </div>
     );
   }

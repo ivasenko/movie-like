@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Search } from '../Search';
+import { Search } from '../search/Search';
 import { getMovie } from '../../utils/api';
 import FontAwesome from 'react-fontawesome';
-// import {SignUp} from "../SignUp";
-// import {SignIn} from "../SignIn";
+import styles from './Header.scss';
 
 function searchFor(term) {
   const termLowCase = term.toLowerCase();
@@ -40,40 +39,33 @@ export class Header extends Component {
   render() {
     const { movieSorting, term } = this.state;
 
-
     return (
-      <div className="header">
-
+      <div className={styles.header}>
         <div className="logo">
           <span>MovieLike</span>
           <FontAwesome name="home" />
         </div>
-        <div className="header-right-side">
-
-
-          <div className="movieSearching">
-              <form>
-                  <input
-                      placeholder="Search a movie"
-                      type="text"
-                      onChange={this.searchHandler}
-                      value={term}
-                  />
-              </form>
-              <div>
-                  {this.state.term  && movieSorting
-                      .filter(searchFor(term))
-                      .map(
-                          movie => (
-                                  <Search key={movie.id} movie={movie} />
-                              )
-                      )}
-              </div>
+        <div className={styles.headerRightSide}>
+          <div className={styles.movieSearching}>
+            <form>
+              <input
+                placeholder="Search a movie"
+                type="text"
+                onChange={this.searchHandler}
+                value={term}
+              />
+              <button>Search</button>
+            </form>
+            <div>
+              {this.state.term &&
+                movieSorting
+                  .filter(searchFor(term))
+                  .map(movie => <Search key={movie.id} movie={movie} />)}
+            </div>
           </div>
-        <div className="sign-in">SignIn</div>/
+          <div className="sign-in">SignIn</div>/
           <div className="sign-up">SignUp</div>
         </div>
-
       </div>
     );
   }

@@ -5,17 +5,47 @@ $main-bg-color: orange;
 }
 .App{
   width: 100%;
+  background: #ccc;
 }
 .logo{
   font-size: 30px;
   font-weight: 800;
 }
+.mainScreen{
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  margin-top: 30px;
+  .movieList{
+    width: 75%;
+  }
+}
+.slide{
+  font-size: 24px;
+  background: #ccc;
+  margin: 0 20px;
+  .movieItem{
+    background-color: #ccc;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    position: relative;
+
+    .movieItemRight{
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #ccc;
+      display: none;
+    }
+  }
+}
 .slick-slider.slick-initialized{
-  background: gray;
+  background: #ccc;
 }
 .slick-slider{
   padding: 0 1%;
-  border: 3px solid gray;
+  border: 3px solid #ccc;
 }
 .slick-arrow.slick-next{
   right: 0;
@@ -24,79 +54,20 @@ $main-bg-color: orange;
   left: 0;
   z-index: 9;
 }
-.slide{
-  .movieItem{
-    background-color: #ccc;
-    border: 1px solid #000;
-    margin-bottom: 10px;
-    .movieItemRight{
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #ccc;
-    }
-  }
-}
-.movieList{
-  .movieItem{
-    background-color: #ccc;
-    border: 1px solid #000;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: flex-start;
+
+.movieItem{
+  background-color: #ccc;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
     .movieItemLeft{
-      margin-right: 10px;
-    }
+    margin-right: 10px;
+  }
     .movieItemTitle{
-      font-weight: 700;
-      font-size: 22px;
-    }
+    font-weight: 700;
+    font-size: 22px;
   }
 }
 
-.header{
-  background: #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2%;
-}
-.header-right-side{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.movieSearching{
-  margin-right: 100px;
-}
-.mainScreen{
-    background-color: #eee;
-    display: flex;
-  justify-content: space-between;
-  padding: 0 2%;
-  margin-top: 30px;
-}
-.movieSorting{
-  width: 20%;
-  overflow: hidden;
-}
-.movieList{
-  width: 75%;
-}
-.filterItem {
-  border: 1px solid black;
-  padding: 5px;
-  &:hover {
-    cursor: pointer;
-    color: green;
-  }
-}
-.movie-search{
-    border: 1px solid green;
-}
 
-.slide{
-  font-size: 24px;
-  background: gray;
-  margin: 0 20px;
-}

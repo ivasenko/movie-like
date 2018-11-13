@@ -1,0 +1,26 @@
+:local(.movieFiltering){
+  width: 25%;
+  overflow: hidden;
+  background: #ccc;
+  border: 1px solid #000;
+  margin-right: 20px;
+  padding: 0 10px;
+}
+
+:local(.filterItem) {
+  border: 1px solid black;
+  padding: 5px;
+  &:hover {
+    cursor: pointer;
+    color: green;
+  }
+}
+:local(.filterResultCountry){
+  display: none;
+}
+:local(.filterResultYear){
+  display: none;
+}
+:local(.filterResultType){
+  display: none;
+}
