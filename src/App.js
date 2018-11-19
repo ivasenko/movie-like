@@ -9,7 +9,7 @@ import { MovieSlider } from './components/movieSlider/MovieSlider';
 
 class App extends Component {
   state = {
-    activeFilters: [],
+    activeFilters: {},
     movies: [],
   };
 
@@ -19,21 +19,30 @@ class App extends Component {
     });
   }
 
-  setActiveFilers(activeFilters) {
-    this.setState({ activeFilters: [activeFilters] });
+  setActiveFilers({ type, value }) {
+    this.setState({
+      activeFilters: {
+        ...this.state.activeFilters,
+        [type]: value,
+      },
+    });
   }
 
   render() {
+    const { activeFilters, movies } = this.state;
+    const keys = Object.keys(activeFilters);
+    const filteredMovie = movies.filter(movie =>
+      keys.every(
+        key => movie[key] === activeFilters[key] || activeFilters[key] === 'all'
+      )
+    );
     return (
       <div className="App">
         <Header />
         <MovieSlider />
         <div className="mainScreen">
           <MovieFiltering setActiveFilers={this.setActiveFilers.bind(this)} />
-          <MovieList
-            activeFilters={this.state.activeFilters}
-            movies={this.state.movies}
-          />
+          <MovieList movies={filteredMovie} />
         </div>
       </div>
     );

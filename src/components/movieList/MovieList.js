@@ -6,11 +6,6 @@ const MovieList = props => {
   const items = props.movies.map((item, i) => {
     return <MovieListItem key={i} item={item} />;
   });
-  return (
-    <div className="movieList">
-      {items}
-      <span>{props.activeFilters.join(':')}</span>
-    </div>
-  );
+  return <div className="movieList">{items}</div>;
 };
 export default MovieList;

@@ -1,11 +1,11 @@
-$main-bg-color: orange;
+$main-bg-color: #ccc;
 
 #root{
   padding: 0 15%;
 }
 .App{
   width: 100%;
-  background: #ccc;
+  background: $main-bg-color;
 }
 .logo{
   font-size: 30px;
@@ -23,10 +23,10 @@ $main-bg-color: orange;
 }
 .slide{
   font-size: 24px;
-  background: #ccc;
+  background: $main-bg-color;
   margin: 0 20px;
   .movieItem{
-    background-color: #ccc;
+    background-color: $main-bg-color;
     border: 1px solid #000;
     margin-bottom: 10px;
     position: relative;
@@ -35,17 +35,17 @@ $main-bg-color: orange;
       position: absolute;
       top: 0;
       left: 0;
-      color: #ccc;
+      color: $main-bg-color;
       display: none;
     }
   }
 }
 .slick-slider.slick-initialized{
-  background: #ccc;
+  background: $main-bg-color;
 }
 .slick-slider{
   padding: 0 1%;
-  border: 3px solid #ccc;
+  border: 3px solid $main-bg-color;
 }
 .slick-arrow.slick-next{
   right: 0;
@@ -56,7 +56,7 @@ $main-bg-color: orange;
 }
 
 .movieItem{
-  background-color: #ccc;
+  background-color: $main-bg-color;
   border: 1px solid #000;
   margin-bottom: 10px;
   display: flex;

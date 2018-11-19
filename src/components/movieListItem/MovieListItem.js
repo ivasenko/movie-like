@@ -13,6 +13,9 @@ const MovieListItem = ({ item }) => {
         <div>Type: {item.type}</div>
         <div>Country: {item.country}</div>
         <div>Year: {item.year}</div>
+        <div>
+          <button>SHOW MORE ...</button>
+        </div>
       </div>
     </div>
   );
