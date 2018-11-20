@@ -3,6 +3,7 @@ import { Search } from '../search/Search';
 import { getMovie } from '../../utils/api';
 import FontAwesome from 'react-fontawesome';
 import styles from './Header.scss';
+import { Link } from 'react-router-dom';
 
 function searchFor(term) {
   const termLowCase = term.toLowerCase();
@@ -63,8 +64,13 @@ export class Header extends Component {
                   .map(movie => <Search key={movie.id} movie={movie} />)}
             </div>
           </div>
-          <div className="sign-in">SignIn</div>/
-          <div className="sign-up">SignUp</div>
+          <div className="sign-in">
+            <Link to="/signin">SignIn</Link>
+          </div>
+          /
+          <div className="sign-up">
+            <Link to="/signup">SignUp</Link>
+          </div>
         </div>
       </div>
     );

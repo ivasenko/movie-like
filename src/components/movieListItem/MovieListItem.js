@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './MovieListItem.scss';
+import { Link } from 'react-router-dom';
 
 const MovieListItem = ({ item }) => {
+  console.log('item', item);
+
   return (
     <div className="movieItem" style={{ position: 'relative' }}>
       <div className="movieItemLeft">
@@ -14,7 +17,9 @@ const MovieListItem = ({ item }) => {
         <div>Country: {item.country}</div>
         <div>Year: {item.year}</div>
         <div>
-          <button>SHOW MORE ...</button>
+          <button>
+            <Link to={`items/${item.id}`}>SHOW MORE ...</Link>
+          </button>
         </div>
       </div>
     </div>
