@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getMovie } from '../../utils/api';
 import { Header } from '../header/Header';
+import { MovieSlider } from '../movieSlider/MovieSlider';
 
 class MovieDetailComponent extends Component {
   state = {
@@ -21,8 +22,7 @@ class MovieDetailComponent extends Component {
       return (
         <div className="movieDetailComponent">
           <Header/>
-          <h2>MovieDetailComponent</h2>
-
+          <MovieSlider/>
         <div className="movieDetail" style={{ position: 'relative' }}>
           <div className="movieDetailLeft">
               <div className="movieDetailImg" style={{ backgroundImage: `url(${movie.img})`}} ></div>
