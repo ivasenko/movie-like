@@ -18,7 +18,6 @@ class MovieDetailComponent extends Component {
 
   render() {
     const { movie } = this.state;
-      console.log(movie);
       return (
         <div className="movieDetailComponent">
           <Header/>

@@ -3,8 +3,6 @@ import styles from './MovieListItem.scss';
 import { Link } from 'react-router-dom';
 
 const MovieListItem = ({ item }) => {
-  console.log('item', item);
-
   return (
     <div className="movieItem" style={{ position: 'relative' }}>
       <div className="movieItemLeft">
