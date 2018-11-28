@@ -63,6 +63,9 @@ $main-bg-color: #ccc;
   justify-content: flex-start;
     .movieItemLeft{
     margin-right: 10px;
+      .movieItemImg{
+        object-fit: cover;
+      }
   }
     .movieItemTitle{
     font-weight: 700;

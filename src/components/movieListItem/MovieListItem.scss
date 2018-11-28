@@ -20,11 +20,8 @@
 .movieDetail{
   width: 100%;
   display: flex;
-  .movieComment{
-    textarea{
-      width: 100%;
-    }
-  }
+  justify-content: center;
+  align-items: center;
 }
 
 .movieDetailLeft{
@@ -33,13 +30,23 @@
     width: 350px;
     min-height: 200px;
     background-repeat: no-repeat;
-    background-size: contain;
+    //background-size: contain;
+    background-size: cover;
+    background-position: center;
   }
 }
 .movieDetailRight{
   width: 60%;
+  .movieItemTitle{
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .movieComment{
+    margin-top: 30px;
+    textarea{
+      width: 100%;
+    }
+  }
 }
-.movieItemTitle{
-  text-transform: uppercase;
-  font-size: 22px;
-}
+
