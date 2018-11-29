@@ -6,7 +6,13 @@ const MovieListItem = ({ item }) => {
   return (
     <div className="movieItem" style={{ position: 'relative' }}>
       <div className="movieItemLeft">
-        <img className="movieItemImg" src={item.img} alt={item.img} width="300" height="200" />
+        <img
+          className="movieItemImg"
+          src={item.img}
+          alt={item.img}
+          width="300"
+          height="200"
+        />
       </div>
       <div className="movieItemRight">
         <div className="movieItemTitle">{item.title}</div>
