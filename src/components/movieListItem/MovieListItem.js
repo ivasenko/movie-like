@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './MovieListItem.scss';
 import { Link } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
 const MovieListItem = ({ item }) => {
   return (
     <div className="movieItem" style={{ position: 'relative' }}>
@@ -29,4 +31,5 @@ const MovieListItem = ({ item }) => {
     </div>
   );
 };
+
 export default MovieListItem;

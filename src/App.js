@@ -3,6 +3,8 @@ import styles from './App.scss';
 import MovieList from './components/movieList/MovieList';
 import { MovieFiltering } from './components/movieFiltering/MovieFiltering';
 import { getMovie } from './utils/api';
+import { connect } from 'react-redux';
+import { getMovieSuccess } from './actions';
 
 class App extends Component {
   state = {
@@ -12,7 +14,7 @@ class App extends Component {
 
   componentDidMount() {
     getMovie().then(response => {
-      this.setState({ movies: response });
+      this.props.propsGetMovieSuccess(response);
     });
   }
 
@@ -26,7 +28,8 @@ class App extends Component {
   }
 
   render() {
-    const { activeFilters, movies } = this.state;
+    const { activeFilters } = this.state;
+    const { movies } = this.props;
     const keys = Object.keys(activeFilters);
     const filteredMovie = movies.filter(movie =>
       keys.every(
@@ -44,4 +47,19 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    propsGetMovieSuccess: movie => {
+      dispatch(getMovieSuccess(movie));
+    },
+  };
+};
+
+const mapStateToProps = state => ({
+  movies: state.movies || [],
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { getMovie } from '../../utils/api';
 
-class MovieDetailComponent extends Component {
-  state = {
-    movie: {},
-  };
+import { connect } from 'react-redux';
+import { getMovieSuccess } from '../../actions';
 
+class MovieDetailComponent extends Component {
   componentDidMount() {
-    const id = +this.props.match.params.itemId;
     getMovie().then(response => {
-      const movie = response.filter(movie => movie.id === id)[0] || {};
-      this.setState({ movie });
+      this.props.propsGetMovieSuccess(response);
     });
   }
 
   render() {
-    const { movie } = this.state;
+    const { movies = [] } = this.props;
+    const id = +this.props.match.params.itemId;
+    const movie = movies.filter(movie => movie.id === id)[0] || {};
+
     return (
       <div className="movieDetailComponent">
         <div className="movieDetail" style={{ position: 'relative' }}>
@@ -47,4 +47,20 @@ class MovieDetailComponent extends Component {
     );
   }
 }
-export default MovieDetailComponent;
+
+const mapDispatchToProps = dispatch => {
+  return {
+    propsGetMovieSuccess: response => {
+      dispatch(getMovieSuccess(response));
+    },
+  };
+};
+
+const mapStateToProps = (state) => ({
+  movies: state.movies
+});
+
+export default connect(
+    mapStateToProps,
+  mapDispatchToProps
+)(MovieDetailComponent);

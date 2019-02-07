@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import movieData from '../../movieData';
 import styles from './MovieFiltering.scss';
+import { connect } from 'react-redux';
 
 const ButtonCategories = (movieCategories, setCountry) =>
   movieCategories.map(country => (
@@ -112,3 +113,18 @@ movieCategoryByYear.sort();
 
 movieCategory.push('all');
 movieCategory.sort();
+
+// const mapStateToProps = state => {
+//     return {
+//         movieCategories: state.movieCategories,
+//         movieCategoriesByYear: state.movieCategoriesByYear,
+//         movieCategoriesByType: state.movieCategoriesByType,
+//         setCountry: state.setCountry,
+//         setMovieByYear: state.setMovieByYear,
+//         setMovieByType: state.setMovieByType,
+//     };
+// };
+//
+// export default connect(
+//     mapStateToProps
+// ) (UI);
